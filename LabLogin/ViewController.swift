@@ -8,17 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         segue.destination.navigationItem.title = Username.text
     }
-
+    
     @IBOutlet var Username: UITextField!
+    
+
+    @IBOutlet var forgotUsernameButton: UIButton!
+    
+    
+    @IBOutlet var forgotPasswordButton: UIButton!
+    
 }
 
 

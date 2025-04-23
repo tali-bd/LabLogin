@@ -28,7 +28,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                 <connections>
-                                    <segue destination="gAk-QK-0yA" kind="show" id="gv0-MT-xyE"/>
+                                    <segue destination="gAk-QK-0yA" kind="show" identifier="successfulLogin" id="gv0-MT-xyE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rca-bb-HBP">
@@ -36,6 +36,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot username?"/>
+                                <connections>
+                                    <action selector="forgotUsernameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iYM-HF-cdr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6p-Wy-c9V">
                                 <rect key="frame" x="217" y="504" width="160" height="35"/>
@@ -56,6 +59,9 @@
                     <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="985-y5-qrm"/>
                     <connections>
                         <outlet property="Username" destination="LLC-nt-C2f" id="Cvz-0S-Bsv"/>
+                        <outlet property="forgotPasswordButton" destination="t6p-Wy-c9V" id="aA1-HN-IhB"/>
+                        <outlet property="forgotUsernameButton" destination="Rca-bb-HBP" id="WZ0-lN-uer"/>
+                        <segue destination="gAk-QK-0yA" kind="show" identifier="moveToLandingScreen" id="NeE-Ek-Yot"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,6 +103,9 @@
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gv0-MT-xyE"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
